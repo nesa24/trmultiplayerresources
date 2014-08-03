@@ -1,0 +1,5 @@
+<meta>
+	<info author="jack9267" type="script" version="1.0.0" />
+
+	<script src="main.nut" type="server" />
+</meta>
