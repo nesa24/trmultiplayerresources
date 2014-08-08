@@ -20,7 +20,7 @@ Engine.AddEventHandler("OnPlayerJoin",OnPlayerJoin);
 
 function OnPlayerQuit(player,reason)
 {
-	Engine.OutputChatBox(Engine.GetPlayerName(player) + " left the game [" + reasons[reason] + "]");
+	Engine.OutputChatBox(Engine.GetPlayerName(player) + " left the game (" + reasons[reason] + ")");
 }
 
 Engine.AddEventHandler("OnPlayerQuit",OnPlayerQuit);
