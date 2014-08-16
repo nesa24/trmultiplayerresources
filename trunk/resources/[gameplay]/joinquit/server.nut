@@ -11,16 +11,10 @@ local reasons=[
 	"Quit"
 ];
 
-function OnPlayerJoin(player)
-{
-	Engine.OutputChatBox(Engine.GetPlayerName(player) + " joined the game");
-}
+Engine.AddEventHandler("OnPlayerJoin",function(player){
+	Engine.OutputChatBox("# " + Engine.GetPlayerName(player) + " has joined the game");
+});
 
-Engine.AddEventHandler("OnPlayerJoin",OnPlayerJoin);
-
-function OnPlayerQuit(player,reason)
-{
-	Engine.OutputChatBox(Engine.GetPlayerName(player) + " left the game (" + reasons[reason] + ")");
-}
-
-Engine.AddEventHandler("OnPlayerQuit",OnPlayerQuit);
+Engine.AddEventHandler("OnPlayerQuit",function(player, reason){
+	Engine.OutputChatBox("# " + Engine.GetPlayerName(player) + " has left the game (" + reasons[reason] + ")");
+});
