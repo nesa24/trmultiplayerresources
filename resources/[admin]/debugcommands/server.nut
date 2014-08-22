@@ -67,10 +67,6 @@ Engine.AddCommandHandler("load",OnLoadCommand);
 
 function OnHealCommand(player, commandLine, command, arguments)
 {
-	if (Engine.GetPlayerHealth(player) <= 0)
-	{
-		Engine.SpawnPlayer(player);
-	}
 	Engine.SetPlayerHealth(player,1000);
 }
 
