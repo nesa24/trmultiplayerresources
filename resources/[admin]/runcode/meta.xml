@@ -2,5 +2,5 @@
 	<info author="jack9267" type="script" version="1.0.0" />
 
 	<script src="server.nut" type="server" />
-	<script src="client.nut" type="client" />
+	<!--<script src="client.nut" type="client" />-->
 </meta>
