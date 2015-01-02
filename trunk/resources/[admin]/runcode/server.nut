@@ -12,3 +12,14 @@ Engine.AddCommandHandler("run",function(player, commandLine, command, arguments)
 		Engine.OutputChatBox("Error: " + error);
 	}
 });
+
+Engine.AddCommandHandler("crun",function(player, commandLine, command, arguments){
+	local code = commandLine.slice(commandLine.find(" "));
+	Engine.TriggerClientEvent("doCrun",player,code,true);
+});
+
+Engine.AddCommandHandler("cdo",function(player, commandLine, command, arguments){
+	local code = commandLine.slice(commandLine.find(" "));
+	Engine.OutputChatBox(Engine.GetPlayerName(player) + " executed client-side command: " + code);
+	Engine.TriggerClientEvent("doCrun",null,code,false);
+});
